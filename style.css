@@ -79,7 +79,7 @@ fieldset div,
 .email-address input:focus,
 .message-box textarea:focus {
     outline: 1px solid var(--Green-600);
-} 
+}
 
 .error-msg {
     color: var(--Red);
@@ -98,7 +98,7 @@ fieldset div {
     align-items: center;
 }
 
-fieldset div:has(input:checked){
+fieldset div:has(input:checked) {
     background-color: var(--Green-200);
     border-color: var(--Green-600);
 }
@@ -111,7 +111,9 @@ fieldset input[type="radio"] {
     margin-right: 0.5rem;
 }
 
-fieldset label, input {
+fieldset label,
+input,
+.consent label {
     cursor: pointer;
 }
 
@@ -144,4 +146,22 @@ form button {
 form button:hover {
     background-color: hsl(169, 84%, 17%);
     transition: all 0.3s ease;
+}
+
+
+/* ---------- Desktop Responsive ---------- */
+@media screen and (min-width: 600px) {
+    main {
+        max-width: 700px;
+        padding: 2rem;
+    }
+    .fullName {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr
+    }   
 }

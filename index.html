@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Contact Us
+  <main>
+    <form>
+      <h1>Contact Us</h1>
+      <div class="fullName">
+        <div class="firstName">
+          <label for="firstName">First Name <span aria-hidden="true" class="required">*</span></label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name"
+            aria-describedby="first-name-error" required>
+          <p id="first-name-error" class="error-msg" aria-live="polite">This field is required</p>
+        </div>
+        <div class="lastName">
+          <label for="lastName">Last Name <span aria-hidden="true" class="required">*</span></label>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" aria-describedby="last-name-error"
+            required>
+          <p id="last-name-error" class="error-msg" aria-live="polite">This field is required</p>
+        </div>
+      </div>
+      <div class="email-address">
+        <label for="email">Email Address <span aria-hidden="true" class="required">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+        <p id="email-error" class="error-msg" aria-live="polite">Please enter a valid email address</p>
+      </div>
+      <fieldset aria-describedby="query-error">
+        <legend>Query Type <span aria-hidden="true" class="required">*</span></legend>
+        <div>
+          <input type="radio" id="general-enquiry" name="query" value="general-enquiry" required>
+          <label for="general-enquiry">General Enquiry</label>
+        </div>
+        <div>
+          <input type="radio" id="support-request" name="query" value="support-request" required>
+          <label for="support-request">Support Request</label>
+        </div>
+        <p id="query-error" class="error-msg" aria-live="polite">Please select a query type</p>
+      </fieldset>
+      <div class="message-box">
+        <label for="message">Message <span aria-hidden="true" class="required">*</span></label>
+        <textarea name="message" id="message" aria-describedby="message-error" required></textarea>
+        <p id="message-error" class="error-msg" aria-live="polite">This field is required</p>
+      </div>
+      <div class="consent">
+        <input type="checkbox" name="consent" id="consent" aria-describedby="consent-error" required>
+        <label for="consent">I consent to being contacted by the team <span aria-hidden="true"
+            class="required">*</span></label>
+        <p id="consent-error" class="error-msg" aria-live="polite">To submit this form, please consent to being
+          contacted</p>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="success-msg" role="alert" hidden>
+      <img src="assets/images/icon-success-check.svg" alt="">
+      <span>Message Sent!</span>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </main>
 
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
 </body>
+
 </html>

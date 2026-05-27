@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 main {
@@ -32,6 +33,14 @@ main {
     margin: 2rem 1rem;
     padding: 1.5rem;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
 }
 
 form,
@@ -146,6 +155,30 @@ form button {
 form button:hover {
     background-color: hsl(169, 84%, 17%);
     transition: all 0.3s ease;
+}
+
+/* ---------- Success Message ---------- */
+.success-msg {
+    position: absolute;
+    background-color: var(--Grey-900);
+    color: var(--White);
+    max-width: 500px;
+    padding: 1.5rem;
+    margin: 0 1rem;
+    border-radius: 0.5rem;
+    top: 20px;
+}
+
+.success-msg div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.success-msg p {
+    color: var(--Grey-500);
+    font-size: 14px;
 }
 
 

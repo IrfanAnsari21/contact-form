@@ -17,7 +17,7 @@
 <body>
 
   <main>
-    <form>
+    <form novalidate>
       <h1>Contact Us</h1>
       <div class="fullName">
         <div class="firstName">
@@ -38,14 +38,14 @@
         <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
         <p id="email-error" class="error-msg" aria-live="polite" hidden>Please enter a valid email address</p>
       </div>
-      <fieldset aria-describedby="query-error">
+      <fieldset>
         <legend>Query Type <span aria-hidden="true" class="required">*</span></legend>
         <div>
-          <input type="radio" id="general-enquiry" name="query" value="general-enquiry" required>
+          <input type="radio" id="general-enquiry" name="query" value="general-enquiry" aria-describedby="query-error" required>
           <label for="general-enquiry">General Enquiry</label>
         </div>
         <div>
-          <input type="radio" id="support-request" name="query" value="support-request" required>
+          <input type="radio" id="support-request" name="query" value="support-request" aria-describedby="query-error" required>
           <label for="support-request">Support Request</label>
         </div>
         <p id="query-error" class="error-msg" aria-live="polite" hidden>Please select a query type</p>
@@ -75,6 +75,7 @@
     </div>
   </main>
 
+  <script src="script.js"></script>
 </body>
 
 </html>

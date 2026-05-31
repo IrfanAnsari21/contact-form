@@ -83,11 +83,20 @@ fieldset div,
     color: var(--Grey-900);
 }
 
+input:hover, fieldset div:hover, textarea:hover {
+    border: 1px solid var(--Green-600);
+}
+
 .firstName input:focus,
 .lastName input:focus,
 .email-address input:focus,
 .message-box textarea:focus {
-    outline: 1px solid var(--Green-600);
+    outline: none;
+    border: 1px solid var(--Green-600);
+}
+
+input.error, textarea.error  {
+    border: 1px solid var(--Red);
 }
 
 .error-msg {
@@ -167,6 +176,14 @@ form button:hover {
     margin: 0 1rem;
     border-radius: 0.5rem;
     top: 20px;
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+}
+
+.success-msg.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .success-msg div {

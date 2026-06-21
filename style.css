@@ -168,7 +168,7 @@ form button:hover {
 
 /* ---------- Success Message ---------- */
 .success-msg {
-    position: absolute;
+    position: fixed;
     background-color: var(--Grey-900);
     color: var(--White);
     max-width: 500px;
